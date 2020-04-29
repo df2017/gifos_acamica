@@ -95,6 +95,36 @@
         height: 24px;
         font-size: 12px;
     }
+    /**************************Section Upload *************************/
+    .menu_create{
+        width: auto;
+        margin: 5px;
+    }
+    .captured_gif{
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 96%;
+        min-width: 300px;
+        height: auto;
+        margin: 5px;
+    }
+ 
+    .card_video_record{
+        justify-content: center;
+        width: 94%;
+        height: auto;
+        align-self: center;
+        margin: 5px;
+    }
+    div.card_video_record > video{
+        width: 100%;
+        height: auto;
+
+    }
+    .card_button_capture{
+        justify-content: center;
+        margin: 10px;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
