@@ -74,7 +74,7 @@ section_four.style.display = 'none';
 titles_section(text_search.value, 'four');
 
 button_search.addEventListener('click', (e) => {
-  
+
   document.querySelector('a.back').style.display = 'inline-block';
 
   let title_old = document.querySelector('#sectionfour > div.section-title');
@@ -88,7 +88,7 @@ button_search.addEventListener('click', (e) => {
 
   section2_gif(titles_section(text_search.value, 'four'), urls);
 
-  e.target.addEventListener('click', () => {text_search.value=""})
+  e.target.addEventListener('click', () => { text_search.value = "" })
 
 });
 
@@ -103,11 +103,14 @@ text_search.addEventListener('input', (e) => {
   if (e.target.value == '') {
     button_search.style.backgroundColor = '#E6E6E6';
   }
-  else {button_search.style.backgroundColor = '#F7C9F3';}
+  else { button_search.style.backgroundColor = '#F7C9F3'; }
 
   let url = create_url('autocomplete', 0, (e.target.value).toString());
 
-  fetch(url)
+  fetch(url, {
+    headers: {'Content-Type': 'application/json'},
+    method: "get"
+  })
     .then((response) => {
       return response.json();
     })
