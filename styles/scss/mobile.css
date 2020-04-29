@@ -18,7 +18,6 @@
         display: grid;
         grid-template-columns: 1fr auto auto;
         grid-template-rows: repeat(2, 1fr);
-        ;
         grid-template-areas: "a b c" "d d d";
     }
     .navupload a#mygif {
@@ -49,9 +48,13 @@
     .section1-gif .card .viewmore {
         margin-top: 200px;
     }
+    #sectionone > div.section1-gif > div > img {
+        height: 88%;
+    }
     .section2-gif {
-        grid-template-columns: 1fr;
-        grid-template-rows: 290px;
+        display: flex;
+        flex-flow: column wrap;
+        grid-template-areas: none;
     }
     .create_gif {
         min-width: 300px;
