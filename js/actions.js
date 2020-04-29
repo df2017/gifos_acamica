@@ -107,7 +107,10 @@ text_search.addEventListener('input', (e) => {
 
   let url = create_url('autocomplete', 0, (e.target.value).toString());
 
-  fetch(url)
+  fetch(url, {
+    headers: {'Content-Type': 'application/json'},
+    method: "get"
+  })
     .then((response) => {
       return response.json();
     })
