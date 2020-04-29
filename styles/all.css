@@ -1,0 +1,15 @@
+@import url('scss/elements.css');
+@import url('scss/container.css');
+@import url('scss/mobile.css');
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch|Oxanium|Lato&display=swap');
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+body {
+    max-width: 1440px;
+    min-height: 320px;
+    margin: auto;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="smile-wink-regular.svg" />
+    <link rel="stylesheet" type="text/css" href="styles/all.css">
+    <link id="themes" rel="stylesheet" type="text/css" href="styles/theme_day.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <title>Gifos</title>
+</head>
+
+<body>
+    <header class="head">
+        <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas:</h1>
+    </header>
+    <div class="contenedor" id="contenedor">
+        <nav class="navupload">
+            <div class="item" id="item">
+                <a class="back"><img src="images/arrow.svg" alt="" id="arrow"></a>
+                <img class="logo" src="/images/gifOF_logo.png" alt="">
+                <h1 class="logonewdark">Gifos</h1>
+            </div>
+
+            <div class="nav-item">
+                <button class="btn-nav-create">Crear gifos</button>
+                <button class="btn-nav-choice">Elegir temas</button>
+                <button class="btn-nav-image"><img src="/images/dropdown.svg" alt=""></button>
+                <a id="mygif">Mis gifos</a>
+
+                <div id="themes_content" class="dropdown-content">
+                    <button class="btn-submenu-day">Sailor Day</button>
+                    <button class="btn-submenu-dark">Sailor Dark</button>
+                </div>
+            </div>
+        </nav>
+        <div class="navsearch">
+            <h2 class="search-item1">Buscar</h2>
+            <input class="search-item2" id='search_input' type="text" value=""
+                placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+            <button class="search-item3"><i class="fas fa-search"></i>Buscar</button>
+        </div>
+        <section id="sectionone"></section>
+        <section id="sectiontwo"></section>
+        <section id="sectionthree"></section>
+        <section id="sectionfour"></section>
+    </div>
+    <footer class="footer_gif">
+        <h4 class="foo">© 2020 - Web Gifos</h4>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/actions.js"></script>
+</body>
+
+</html>

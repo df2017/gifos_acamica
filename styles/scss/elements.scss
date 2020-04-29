@@ -1,0 +1,452 @@
+%btn-navbar {
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+%font-family {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0;
+}
+
+%button_menu {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0;
+    width: 144px;
+    height: 36px;
+    font-size: 16px;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+%btn_download_copy{
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 15px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 0;
+}
+
+/******************************* Elements HEAD *******************************/
+
+.head h1 {
+    @extend %font-family;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 3px;
+}
+
+/******************************* Elements nav.navupload *******************************/
+
+.navupload .logonewdark {
+    display: none;
+}
+
+.navupload a.back {
+    display: none;
+    margin: auto;
+}
+
+.navupload .item a {
+    margin: 7px;
+    text-decoration: none;
+}
+
+.navupload img#arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.navupload .btn-nav-create {
+    grid-area: a;
+    @extend %font-family;
+    @extend %btn-navbar;
+    margin-right: 15px;
+    padding: 9px 26px 9px 26px;
+    width: 125px;
+}
+
+.navupload .btn-nav-choice {
+    grid-area: b;
+    @extend %font-family;
+    @extend %btn-navbar;
+    padding: 9px 26px 9px 26px;
+    width: 130px;
+}
+
+.navupload .btn-nav-image {
+    grid-area: c;
+    @extend %font-family;
+    @extend %btn-navbar;
+    width: 36px;
+}
+
+.navupload .btn-nav-create:hover,
+.navupload .btn-nav-choice:hover,
+.navupload .btn-nav-image:hover,
+.navupload .btn-dropdown:hover {
+    border: 1px dotted #110038;
+    padding: 2px;
+}
+
+.navupload a#mygif {
+    @extend %font-family;
+    grid-area: d;
+    justify-self: left;
+    font-weight: 400;
+    color: #110038;
+    line-height: 18px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.navupload a#mygif::first-letter {
+    text-decoration: underline;
+}
+
+.navupload a#mygif:hover {
+    border: 1px dotted #110038;
+    padding: 7px 0px 7px 0px;
+    cursor: default;
+}
+
+.navupload a#mygif:active {
+    color: #EBEBEB;
+}
+
+
+/******************************* Elements div.dropdown-content *******************************/
+
+#themes_content > button {
+    width: 155px;
+    margin: 6px;
+    height: 35px;
+}
+#themes_content > button.btn-submenu-day {
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+#themes_content > button.btn-submenu-day::first-letter {
+    text-decoration: underline;
+}
+#themes_content > button.btn-submenu-dark {
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/******************************* Elements div.navsearch *******************************/
+
+.navsearch .search-item1 {
+    grid-area: title;
+    @extend %font-family;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 3px;
+}
+.navsearch .search-item2 {
+    @extend %font-family;
+    grid-area: input;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    height: 48px;
+    margin-left: 15px;
+    padding: 0px 5px;
+    font-size: 16px;
+    color: #B4B4B4;
+    line-height: 22px;
+}
+.navsearch .search-item3 {
+    @extend %font-family;
+    grid-area: button;
+    margin-left: 10px;
+    margin-right: 18px;
+    height: 36px;
+    font-size: 16px;
+    color: #B4B4B4;
+    background: #E6E6E6;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    line-height: 18px;
+    padding: 0px;
+}
+.navsearch .search-item3 i.fas.fa-search {
+    padding: 0px 8px 0px 0px;
+}
+.card_word_autocomplete .btn_complete_word{
+    @extend %font-family;
+    text-align: left;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    padding: 0px 0px 0px 15px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 16px;
+    margin-right: 130px;
+    margin-bottom: 10px;
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/******* Elements Titles  *******/
+
+.section-title h2 {
+    @extend %font-family;
+    font-size: 14px;
+    color: #110038;
+    padding: 7px;
+}
+.card-gif-title h3 {
+    @extend %font-family;
+    padding: 3px;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+
+/******* Elements  GIFT SECTION 1  *******/
+
+#sectionone > div.section1-gif > div > img {
+    width: 96%;
+    height: 89%;
+    object-fit: cover;
+    object-position: center;
+}
+div.section1-gif > div > div > button > img {
+    width: 100%;
+    height: 100%;
+}
+.close, #upload > div.captured_gif > div.card-gif-title > button > img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.section1-gif .card .viewmore {
+    @extend %font-family;
+    cursor: pointer;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    padding: 8px 12px;
+    height: 34px;
+    margin-top: 230px;
+    margin-left: 14px;
+    margin-bottom: 15px;
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+
+/******* Elements GIFT SECTION 2  *******/
+
+@for $i from 0 to 20 {
+    .card-gif#{$i} {
+        grid-area: gif + $i;
+        background-color: #F568F3;
+        height: 290px;
+    }
+}
+.section2-gif img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/******* Elements FOOTER *******/
+
+.footer_gif h4.foo {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+
+/******* Elements UPLOAD.html *******/
+%button_generic {
+    @extend %font-family;
+    width: 144px;
+    font-size: 16px;
+    height: 36px;
+    border: 1px solid #110038;
+}
+button.btn_capture_gif {
+    @extend %button_generic;
+    background: #F7C9F3;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+button.btn_capture_img {
+    width: 36px;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+button.btn_stop_gif{
+    @extend %button_generic;
+    background: #FF6161;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+button.btn_recording_img {
+    width: 36px;
+    height: 36px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+button.button_repeat{
+    @extend %button_generic;
+    margin-right: 14px;
+    background: #FFF4FD;;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+button.button_upload{
+    @extend %button_generic;
+    background: #F7C9F3;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+img.img_record{
+    width: 838px;
+    height: 434px;
+    object-position: center;
+}
+
+@for $i from 0 to 23 {
+    .progress_block#{$i} {
+        width: 12px;
+        height: 20px;
+        margin: 1.5px;
+        background-color: #999999;
+    }
+}
+#progress_bar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 39px;
+    width: 324px;
+    height: 24px;
+    background: #B4B4B4;
+    box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+}
+.create_gif img {
+    width: 32px;
+    height: 34px;
+}
+.img_world{
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+.text_wait_upload{
+    @extend %font-family;
+    font-weight: 600;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+.btn_progress_cancel{
+    @extend %button_generic;
+    margin-right: 14px;
+    background: #FFF4FD;;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+.card_logo_text h3 {
+    @extend %font-family;
+    font-weight: 600;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-left: 16px;
+}
+
+.card_paragraph p {
+    @extend %font-family;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.card_button_menu button.menu_cancel {
+    @extend %button_menu;
+    margin-right: 16px;
+    background: #FFF4FD;
+}
+
+.card_button_menu button.menu_begin {
+    @extend %button_menu;
+    background: #F7C9F3;
+}
+/** *****************************************************************************************/
+.menu_download img.gif_upload{
+    margin-top: 30px;
+    margin-left: 27px;
+    width: 365px;
+    height: 190px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.card_download_copy > h3 {
+    @extend %font-family;
+    font-weight: 600;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+.card_download_copy > a.btn_download_gif{
+    @extend %font-family;
+    @extend %btn_download_copy;
+    line-height: 34px;
+    width: 254px;
+    text-decoration: none;
+    cursor: context-menu;
+}
+.card_download_copy > .btn_copy_gif{
+    @extend %font-family;
+    @extend %btn_download_copy;
+    height: 36px;
+    width: 256px;
+}
+.card_img_button > button.button_ok{
+    @extend %font-family;
+    width: 144px;
+    height: 36px;
+    margin-top: 64px;
+    margin-left: 531px;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}

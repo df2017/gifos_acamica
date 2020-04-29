@@ -1,0 +1,9 @@
+body {
+    background-color: #FFF4FD;
+}
+
+.head,
+.navsearch .search-item1,
+div.card-gif-title {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}

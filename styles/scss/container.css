@@ -1,0 +1,268 @@
+.head {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-width: 300px;
+}
+.contenedor {
+    max-width: 1200px;
+    min-width: 300px;
+    margin: auto;
+}
+
+/* Container Navupload */
+
+.navupload {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navupload .item {
+    display: flex;
+    align-items: center;
+}
+.navupload .nav-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    grid-template-rows: auto 2fr;
+    grid-template-areas: "a b c d" ". e e .";
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+.navsearch {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 0.7fr;
+    grid-template-rows: 25px 78px auto;
+    grid-template-areas: "title title title" 
+                         "input input button"
+                         "word word word";
+    height: 100px;
+    margin-top: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+}
+.card_word_autocomplete{
+    grid-area: word;
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    width: 100%;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.card_word_autocomplete > p{
+    margin-left: 20px;
+    padding: 10px;
+}
+div#themes_content {
+    grid-area: e;
+    display: none;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #B4B4B4;
+    flex-flow: column wrap;
+    position: absolute;
+    margin-top: auto;
+}
+
+/* Container Section ONE */
+
+.section-title {
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+.section1-gif {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 313px);
+    grid-gap: 15px;
+    grid-auto-flow: row dense;
+}
+.section1-gif .card {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 0px 0 0 #FFFFFF;
+    text-align: center;
+}
+.section1-gif .card .card-gif-title {
+    margin: 3px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.section2-gif {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "gif0 gif1 gif2 gif3" 
+                        "gif4 gif4 gif5 gif6" 
+                        "gif7 gif8 gif9 gif9"
+
+                        "gif10 gif11 gif12 gif13" 
+                        "gif14 gif14 gif15 gif16" 
+                        "gif17 gif18 gif19 gif19";
+    grid-gap: 15px;
+    grid-auto-flow: row dense;
+}
+
+
+/* Container Section UPLOAD */
+
+.menu_create {
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    margin-top: 75px;
+    width: 684px;
+    height: 386px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
+}
+.card_logo_text {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    margin-left: 25px;
+    align-items: center;
+}
+.card_paragraph {
+    margin-top: 7px;
+    margin-left: 73px;
+}
+.card_button_menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+    margin-right: 36px;
+}
+.card-gif-title{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/**** download ***/
+.menu_download{
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    margin-top: 75px;
+    width: 720px;
+    height: 391px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
+}
+.card_img_button{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card_download_copy{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 30px;
+    margin-left: 27px;
+}
+
+
+/*********************/
+.captured_gif {
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    margin-top: 75px;
+    width: 860px;
+    height: 548px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
+}
+.card_video_record {
+    margin-top: 9px;
+    margin-left: 9px;
+    margin-right: 9px;
+    width: 838px;
+    height: 434px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.card_img_record {
+    margin-top: 9px;
+    margin-left: 9px;
+    margin-right: 9px;
+    width: 838px;
+    height: 434px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.card_button_capture{
+    margin-top: 24px;
+    margin-right: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.card_button_stop{
+    margin-top: 24px;
+    margin-right: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.card_button_upload{
+    margin-top: 24px;
+    margin-right: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.card_progress_bar{
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    margin-top: 9px;
+    margin-left: 9px;
+    margin-right: 9px;
+    width: 838px;
+    height: 434px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card_button_cancel{
+    margin-top: 24px;
+    margin-right: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+/* Container footer */
+
+footer.footer_gif {
+    max-width: 1180px;
+    min-width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #414141;
+}

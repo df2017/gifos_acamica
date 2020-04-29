@@ -1,0 +1,119 @@
+@media (max-width: 600px) {
+    .navupload {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navupload .item {
+        margin-bottom: 20px;
+    }
+    .navupload .btn-nav-create {
+        padding: 3px;
+        width: 123px;
+        margin-right: 5px;
+    }
+    .navupload .btn-nav-choice {
+        padding: 3px;
+    }
+    .navupload .nav-item {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: repeat(2, 1fr);
+        ;
+        grid-template-areas: "a b c" "d d d";
+    }
+    .navupload a#mygif {
+        margin-top: 20px;
+        justify-self: center;
+    }
+    .navsearch {
+        justify-content: center;
+        height: auto;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25px auto auto;
+        grid-template-areas: "title" "input" "button";
+    }
+    .navsearch .search-item2 {
+        margin-left: 0px;
+        margin: 5px;
+    }
+    .navsearch .search-item3 {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin: 10px;
+    }
+    .section1-gif {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 290px);
+    }
+    .section1-gif .card .viewmore {
+        margin-top: 200px;
+    }
+    .section2-gif {
+        grid-template-columns: 1fr;
+        grid-template-rows: 290px;
+    }
+    .create_gif {
+        min-width: 300px;
+        margin-top: 75px;
+        width: auto;
+        height: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .card_paragraph {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card_logo_text {
+        margin-left: 10px;
+    }
+    .card_logo_text h3 {
+        font-size: 13px;
+        margin-left: 5px;
+    }
+    .card_paragraph p {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .card_button_menu {
+        justify-content: center;
+        margin-top: 28px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+    .card_button_menu button.menu_cancel {
+        width: 100px;
+        height: 24px;
+        font-size: 12px;
+    }
+    .card_button_menu button.menu_begin {
+        width: 100px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .section1-gif {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 290px);
+        grid-auto-flow: column;
+    }
+    .section1-gif .card .viewmore {
+        margin-top: 210px;
+    }
+    .section2-gif {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 290px);
+        grid-template-areas: "gif0 gif1" "gif2 gif3" "gif4 gif5" "gif6 gif7" "gif8 gif9";
+    }
+    .create_gif {
+        margin-top: 75px;
+        width: 590px;
+    }
+    .card_paragraph {
+        margin-left: 50px;
+    }
+}
