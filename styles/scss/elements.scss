@@ -273,7 +273,13 @@ div.section1-gif > div > div > button > img {
     object-fit: cover;
     object-position: center;
 }
-
+#sectiontwo > div p.tags_hover, #sectionfour > div  p.tags_hover{
+    @extend %font-family;
+    font-size: 14px;
+    position: relative;
+    color: #FFFFFF;
+    margin-top: -40px;
+}
 /******* Elements FOOTER *******/
 
 .footer_gif h4.foo {

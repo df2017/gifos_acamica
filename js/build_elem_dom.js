@@ -86,7 +86,7 @@ function section1_gif(section) {
             })
             .catch(() => {
                 card_img.src = 'images/not_available.gif';
-                
+
             });
     })
 }
@@ -102,8 +102,6 @@ function section2_gif(section, url, options = 'none') {
         section.appendChild(div_gifs3).setAttribute('class', 'section2-gif');
     }
 
-    let block_gifs3;
-    let elems = document.createElement("img");
     fetch(url)
 
         .then(response => {
@@ -111,19 +109,37 @@ function section2_gif(section, url, options = 'none') {
         })
         .then((data) => {
             data.data.forEach((elem) => {
-
-                block_gifs3 = document.createElement("div");
-                elems = document.createElement("img");
+                let block_gifs3 = document.createElement("div");
+                let elems = document.createElement("img");
+                let tag_hover = document.createElement('p');
                 block_gifs3.appendChild(elems);
+                block_gifs3.appendChild(tag_hover).setAttribute('class', 'tags_hover');
+
                 if (options == 'home') {
                     div_gifs2.appendChild(block_gifs3);
                 }
                 else {
                     div_gifs3.appendChild(block_gifs3);
                 }
-                block_gifs3.className = ("card-gif" + (data.data.indexOf(elem)).toString());
-                //console.log(elem.images.fixed_height_still.url)
-                elems.src = elem.images.fixed_height_downsampled.url//`https://media.giphy.com/media/${elem.id}/giphy.gif`;
+                let tags = (elem.title).toString().split(' ').join(' #');
+                let class_div = "card-gif" + (data.data.indexOf(elem)).toString()
+
+                block_gifs3.className = class_div;
+                elems.src = elem.images.fixed_height_downsampled.url; //`https://media.giphy.com/media/${elem.id}/giphy.gif`;
+
+                let width_img = (document.querySelector(`div.${class_div}`).offsetWidth).toString();
+
+                elems.addEventListener("mouseover", (event) => {
+                    
+                    if (width_img != 0) tag_hover.style.width = `${width_img}px`;
+                    tag_hover.style.height = '36px';
+                    tag_hover.textContent = `#${tags}`;
+
+                    event.target.addEventListener("mouseout", () => {
+                        tag_hover.textContent = '';
+                        tag_hover.style.height = '0px';
+                    })
+                });
             })
         })
         .catch(() => {
