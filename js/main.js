@@ -5,8 +5,6 @@ import { create_url } from './calls_api.js'
 
 /***************************** Variables *****************************/
 
-window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
-
 let titles = ['Hoy te sugerimos:', 'Tendencias:'];
 let run = theme_default();
 
@@ -15,6 +13,7 @@ let run = theme_default();
 function theme_default() {
 
     window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
+    
     let theme = localStorage.getItem('theme');
     if (theme != null) {
         document.getElementById("themes").href = theme;
