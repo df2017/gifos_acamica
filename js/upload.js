@@ -115,7 +115,7 @@ function create_elements_div_record() {
     let icon_close = document.createElement("img");
 
     block_title_camera.appendChild(button_close).setAttribute('class', 'close');
-    button_close.appendChild(icon_close).setAttribute('src', 'images/button3.svg');
+    button_close.appendChild(icon_close).setAttribute('src', './images/button3.svg');
 
     /******************************************** View Camera ********************************************/
 
@@ -131,7 +131,7 @@ function create_elements_div_record() {
     block_button_camera.appendChild(button_capture_img).setAttribute('class', 'btn_capture_img');
 
     let card_img = document.createElement("img");
-    card_img.src = '/images/camera.svg';
+    card_img.src = './images/camera.svg';
     button_capture_img.appendChild(card_img).setAttribute('id', 'capture_img');
 
     let button_capture = document.createElement("button");
@@ -148,7 +148,7 @@ function create_elements_div_record() {
     block_button_recording.appendChild(button_recording_img).setAttribute('class', 'btn_recording_img');
 
     let card_img_recording = document.createElement("img");
-    card_img_recording.src = '/images/recording.svg';
+    card_img_recording.src = './images/recording.svg';
     button_recording_img.appendChild(card_img_recording).setAttribute('id', 'recording_img');
 
     let button_record = document.createElement("button");

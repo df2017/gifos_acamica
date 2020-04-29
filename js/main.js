@@ -10,10 +10,9 @@ let run = theme_default();
 
 /************************** Load theme **************************/
 
-window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
-
 function theme_default() {
 
+    window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
     let theme = localStorage.getItem('theme');
     if (theme != null) {
         document.getElementById("themes").href = theme;

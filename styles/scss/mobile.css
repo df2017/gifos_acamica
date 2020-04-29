@@ -100,7 +100,7 @@
         width: auto;
         margin: 5px;
     }
-    .captured_gif{
+    .captured_gif, .menu_download{
         flex-flow: column wrap;
         justify-content: center;
         width: 96%;
@@ -108,20 +108,48 @@
         height: auto;
         margin: 5px;
     }
-    .card_video_record{
+    .card_video_record, .card_button_capture, .card_img_record, img.gif_upload{
         justify-content: center;
         height: auto;
         align-self: center;
         margin: 5px;
+        width: auto;
     }
-    div.card_video_record > video{
+    .card_img_button{
+        width: auto;
+        flex-flow: column wrap;
+        height: auto;
+        justify-content: center;
+    }
+    div.card_video_record > video, .card_img_record > img.img_record {
         width: 100%;
         height: auto;
-
     }
-    .card_button_capture{
+    .menu_download img.gif_upload, .card_progress_bar, #progress_bar{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+    img.img_world{
+        margin-top: 10px;
+        width: 24px;
+        height: 30px;
+    }
+    .menu_download img.gif_upload
+    .card_button_capture, .card_button_stop, .card_button_upload,
+    .button_repeat, .button_upload, .card_button_cancel, .button_ok,.card_download_copy{
         justify-content: center;
         margin: 10px;
+    }
+    .card_img_button > button.button_ok{
+        justify-content: center;
+        margin: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 
