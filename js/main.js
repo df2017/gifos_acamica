@@ -10,16 +10,17 @@ let run = theme_default();
 
 /************************** Load theme **************************/
 
-function theme_default() {
+function theme_default() { 
 
-    window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
-    
     let theme = localStorage.getItem('theme');
+    console.log(theme)
     if (theme != null) {
         document.getElementById("themes").href = theme;
-        return true;
     }
-    return false
+    else{ 
+        window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
+    }
+    return true;
 }
 
 /***************************** Function Run Sections  *****************************/

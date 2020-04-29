@@ -1,7 +1,7 @@
 body{
     background-color: #110038;
 }
-.head, .navsearch .search-item1, .section1-gif .card .card-gif-title {
+.head, .navsearch .search-item1, .section1-gif .card .card-gif-title, #sectiontwo > div p.tags_hover , #sectionfour > div  p.tags_hover {
     background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 .navupload a#mygif{
