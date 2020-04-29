@@ -19,7 +19,7 @@ function create_url(action = 'none', limit = 0, tag = 'none') {
             url = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=${limit}&rating=G`;
             break;
         case 'autocomplete':
-            url = `http://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${tag}`;
+            url = `https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${tag}`;
             break;
         default:
             url = 'https://upload.giphy.com/v1/gifs'

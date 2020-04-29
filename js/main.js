@@ -5,6 +5,8 @@ import { create_url } from './calls_api.js'
 
 /***************************** Variables *****************************/
 
+window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
+
 let titles = ['Hoy te sugerimos:', 'Tendencias:'];
 let run = theme_default();
 

@@ -184,7 +184,7 @@ function create_elements_div_record() {
 
     let img_world = document.createElement("img");
     block_progress_bar.appendChild(img_world).setAttribute('class', 'img_world');
-    img_world.src = '/images/globe_img.png';
+    img_world.src = './images/globe_img.png';
 
     let text_wait_upload = document.createElement("h2");
     block_progress_bar.appendChild(text_wait_upload).setAttribute('class', 'text_wait_upload');
