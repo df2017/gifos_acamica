@@ -261,123 +261,143 @@ div.section1-gif > div > div > button > img {
 .card-gif0 {
   grid-area: gif0;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif1 {
   grid-area: gif1;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif2 {
   grid-area: gif2;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif3 {
   grid-area: gif3;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif4 {
   grid-area: gif4;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif5 {
   grid-area: gif5;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif6 {
   grid-area: gif6;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif7 {
   grid-area: gif7;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif8 {
   grid-area: gif8;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif9 {
   grid-area: gif9;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif10 {
   grid-area: gif10;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif11 {
   grid-area: gif11;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif12 {
   grid-area: gif12;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif13 {
   grid-area: gif13;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif14 {
   grid-area: gif14;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif15 {
   grid-area: gif15;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif16 {
   grid-area: gif16;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif17 {
   grid-area: gif17;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif18 {
   grid-area: gif18;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
 /* line 263, elements.scss */
 .card-gif19 {
   grid-area: gif19;
   background-color: #F568F3;
-  height: 290px; }
+  height: 290px;
+  margin-top: 10px; }
 
-/* line 269, elements.scss */
+/* line 270, elements.scss */
 .section2-gif img {
   width: 100%;
   height: 290px;
@@ -387,7 +407,7 @@ div.section1-gif > div > div > button > img {
      object-position: center; }
 
 /******* Elements FOOTER *******/
-/* line 278, elements.scss */
+/* line 279, elements.scss */
 .footer_gif h4.foo {
   font-size: 1rem;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -396,20 +416,20 @@ div.section1-gif > div > div > button > img {
   color: #FFFFFF; }
 
 /******* Elements UPLOAD.html *******/
-/* line 288, elements.scss */
+/* line 289, elements.scss */
 button.btn_capture_gif, button.btn_stop_gif, button.button_repeat, button.button_upload, .btn_progress_cancel {
   width: 144px;
   font-size: 16px;
   height: 36px;
   border: 1px solid #110038; }
 
-/* line 295, elements.scss */
+/* line 296, elements.scss */
 button.btn_capture_gif {
   background: #F7C9F3;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 300, elements.scss */
+/* line 301, elements.scss */
 button.btn_capture_img {
   width: 36px;
   height: 36px;
@@ -418,13 +438,13 @@ button.btn_capture_img {
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 307, elements.scss */
+/* line 308, elements.scss */
 button.btn_stop_gif {
   background: #FF6161;
   -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 312, elements.scss */
+/* line 313, elements.scss */
 button.btn_recording_img {
   width: 36px;
   height: 36px;
@@ -433,188 +453,188 @@ button.btn_recording_img {
   -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 319, elements.scss */
+/* line 320, elements.scss */
 button.button_repeat {
   margin-right: 14px;
   background: #FFF4FD;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 325, elements.scss */
+/* line 326, elements.scss */
 button.button_upload {
   background: #F7C9F3;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 330, elements.scss */
+/* line 331, elements.scss */
 img.img_record {
   width: 838px;
   height: 434px;
   -o-object-position: center;
      object-position: center; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block0 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block1 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block2 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block3 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block4 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block5 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block6 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block7 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block8 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block9 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block10 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block11 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block12 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block13 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block14 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block15 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block16 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block17 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block18 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block19 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block20 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block21 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 337, elements.scss */
+/* line 338, elements.scss */
 .progress_block22 {
   width: 12px;
   height: 20px;
   margin: 1.5px;
   background-color: #999999; }
 
-/* line 344, elements.scss */
+/* line 345, elements.scss */
 #progress_bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,18 +650,18 @@ img.img_record {
   -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
           box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC; }
 
-/* line 353, elements.scss */
+/* line 354, elements.scss */
 .create_gif img {
   width: 32px;
   height: 34px; }
 
-/* line 357, elements.scss */
+/* line 358, elements.scss */
 .img_world {
   width: 48px;
   height: 48px;
   margin-bottom: 10px; }
 
-/* line 362, elements.scss */
+/* line 363, elements.scss */
 .text_wait_upload {
   font-weight: 600;
   font-size: 16px;
@@ -650,14 +670,14 @@ img.img_record {
   text-align: center;
   line-height: 22px; }
 
-/* line 371, elements.scss */
+/* line 372, elements.scss */
 .btn_progress_cancel {
   margin-right: 14px;
   background: #FFF4FD;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
-/* line 377, elements.scss */
+/* line 378, elements.scss */
 .card_logo_text h3 {
   font-weight: 600;
   font-size: 16px;
@@ -666,7 +686,7 @@ img.img_record {
   line-height: 22px;
   margin-left: 16px; }
 
-/* line 387, elements.scss */
+/* line 388, elements.scss */
 .card_paragraph p {
   font-size: 14px;
   color: #110038;
@@ -674,17 +694,17 @@ img.img_record {
   line-height: 20px;
   margin-top: 10px; }
 
-/* line 396, elements.scss */
+/* line 397, elements.scss */
 .card_button_menu button.menu_cancel {
   margin-right: 16px;
   background: #FFF4FD; }
 
-/* line 402, elements.scss */
+/* line 403, elements.scss */
 .card_button_menu button.menu_begin {
   background: #F7C9F3; }
 
 /** *****************************************************************************************/
-/* line 407, elements.scss */
+/* line 408, elements.scss */
 .menu_download img.gif_upload {
   margin-top: 30px;
   margin-left: 27px;
@@ -695,7 +715,7 @@ img.img_record {
   -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
           box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000; }
 
-/* line 416, elements.scss */
+/* line 417, elements.scss */
 .card_download_copy > h3 {
   font-weight: 600;
   font-size: 16px;
@@ -703,19 +723,19 @@ img.img_record {
   letter-spacing: 0;
   line-height: 22px; }
 
-/* line 424, elements.scss */
+/* line 425, elements.scss */
 .card_download_copy > a.btn_download_gif {
   line-height: 34px;
   width: 254px;
   text-decoration: none;
   cursor: context-menu; }
 
-/* line 432, elements.scss */
+/* line 433, elements.scss */
 .card_download_copy > .btn_copy_gif {
   height: 36px;
   width: 256px; }
 
-/* line 438, elements.scss */
+/* line 439, elements.scss */
 .card_img_button > button.button_ok {
   width: 144px;
   height: 36px;

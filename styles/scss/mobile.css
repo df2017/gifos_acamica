@@ -25,10 +25,9 @@
         justify-self: center;
     }
     .navsearch {
-        justify-content: center;
         height: auto;
         grid-gap: 10px;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 25px auto auto;
         grid-template-areas: "title" "input" "button";
     }
@@ -110,7 +109,16 @@
     .section2-gif {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 290px);
-        grid-template-areas: "gif0 gif1" "gif2 gif3" "gif4 gif5" "gif6 gif7" "gif8 gif9";
+        grid-template-areas: "gif0 gif1" 
+                            "gif2 gif3" 
+                            "gif4 gif5" 
+                            "gif6 gif7" 
+                            "gif8 gif9"
+                            "gif10 gif11" 
+                            "gif12 gif13" 
+                            "gif14 gif15" 
+                            "gif16 gif17" 
+                            "gif18 gif19";
     }
     .create_gif {
         margin-top: 75px;
