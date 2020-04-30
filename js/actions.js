@@ -35,11 +35,13 @@ button_theme_dark.addEventListener('click', () => { selection_themes('dark') });
 
 /***************************** Event Section My Gif *****************************/
 
-button_migif.addEventListener("click", () => { section_mygif() });
+button_migif.addEventListener("click", () => {
+   section_mygif(titles_section)
+});
 
 /***************************** Event Back Section *****************************/
 
-button_back.addEventListener("click", () => { back_section() });
+button_back.addEventListener("click", back_section);
 
 /***************************** Event Create Gif *****************************/
 
@@ -71,27 +73,41 @@ function selection_themes(theme) {
 
 /**************************** Functions Section My Gif ****************************/
 
-function section_mygif() {
+function section_mygif(callback) {
 
-  document.getElementById('mygif').style.pointerEvents = "none";
-  document.querySelector('a.back').style.display = 'inline-block';
+  callback('Mis guifos', 'three');
+  let create_div = document.createElement('div');
+  section_three.appendChild(create_div).setAttribute('class', 'section-mygif')
+
+  Object.keys(localStorage).forEach((key, index) => {
+    if (key != 'theme') {
+      let create_img = document.createElement('img');
+      create_div.appendChild(create_img).setAttribute('class','img_save');
+      create_img.src = `https://media.giphy.com/media/${localStorage.getItem(key)}/giphy.gif`;
+    }
+
+  })
+
+  button_migif.style.pointerEvents = "none";
+  button_back.style.display = 'inline-block';
   section_one.style.display = 'none';
   section_two.style.display = 'none';
   section_four.style.display = 'none';
-  section_three.style.display = 'block';
-  titles_section('Mis guifos', 'three');
+  section_three.style.display = 'grid';
 }
 
 /**************************** Functions Back Section ****************************/
 
 function back_section() {
-  document.getElementById('mygif').style.pointerEvents = "auto";
+
+  button_migif.style.pointerEvents = "auto";
   document.querySelector('div.nav-item').style.display = '';
-  document.querySelector('a.back').style.display = 'none';
+  button_back.style.display = 'none';
   section_one.style.display = 'block';
   section_two.style.display = 'block';
   section_three.style.display = 'none';
   section_four.style.display = 'none';
+
 }
 
 /***************************** Function button Search  *****************************/

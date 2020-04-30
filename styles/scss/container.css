@@ -10,7 +10,7 @@
     margin: auto;
 }
 
-/* Container Navupload */
+/**************************** Container Navupload ****************************/
 
 .navupload {
     display: flex;
@@ -34,6 +34,9 @@
     justify-items: center;
     position: relative;
 }
+
+/**************************** Container NavSearch ****************************/
+
 .navsearch {
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
@@ -73,7 +76,7 @@ div#themes_content {
     margin-top: auto;
 }
 
-/* Container Section ONE */
+/**************************** Container Section ONE ****************************/
 
 .section-title {
     margin-top: 60px;
@@ -105,6 +108,9 @@ div#themes_content {
     justify-content: space-between;
     align-items: center;
 }
+
+/************************* Container Section TWO and THREE *************************/
+
 .section2-gif {
     margin-top: 20px;
     margin-left: 10px;
@@ -124,8 +130,19 @@ div#themes_content {
     grid-auto-flow: row dense;
 }
 
+/**************************** Container Section FOUR ****************************/
 
-/* Container Section UPLOAD */
+.section-mygif{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(20, auto);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-gap: 15px;
+    grid-auto-flow: row dense;
+}
+
+/**************************** Container Section UPLOAD ****************************/
 
 .menu_create {
     display: flex;
@@ -160,32 +177,6 @@ div#themes_content {
     justify-content: space-between;
     align-items: center;
 }
-/**** download ***/
-.menu_download{
-    display: flex;
-    flex-flow: column wrap;
-    margin: auto;
-    margin-top: 75px;
-    width: 720px;
-    height: 391px;
-    background: #E6E6E6;
-    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
-}
-.card_img_button{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-.card_download_copy{
-    display: flex;
-    flex-flow: column wrap;
-    margin-top: 30px;
-    margin-left: 27px;
-}
-
-
-/*********************/
 .captured_gif {
     display: flex;
     flex-flow: column wrap;
@@ -257,7 +248,33 @@ div#themes_content {
     flex-flow: row wrap;
     justify-content: flex-end;
 }
-/* Container footer */
+
+/**************************** Container Menu Download ****************************/
+
+.menu_download{
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    margin-top: 75px;
+    width: 720px;
+    height: 391px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 0px 2px 0 0 #FFFFFF;
+}
+.card_img_button{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card_download_copy{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 30px;
+    margin-left: 27px;
+}
+
+/**************************** Container Footer ****************************/
 
 footer.footer_gif {
     max-width: 1180px;

@@ -19,9 +19,8 @@ post_body.append('api_key', api_key);
 post_body.append('username', 'dfgif');
 
 const stream = () => {
-    return navigator.mediaDevices.getUserMedia({ video: { width: 838, height: 434 } })
+    return navigator.mediaDevices.getUserMedia({ video:'http://192.168.0.20:4747/'})
 };
-
 
 /***************************** Variables *****************************/
 
