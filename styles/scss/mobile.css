@@ -93,6 +93,10 @@
         height: 24px;
         font-size: 12px;
     }
+    img.img_save{
+        width: 96%;
+        height: 88%;
+    }
 
     /**************************Section Upload *************************/
     .menu_create{
@@ -120,7 +124,7 @@
         height: auto;
         justify-content: center;
     }
-    div.card_video_record > video, .card_img_record > img.img_record {
+    div.card_video_record > video, .card_img_record > img.img_record{
         width: 100%;
         height: auto;
     }
@@ -186,29 +190,27 @@
     /**************************Section Upload *************************/
 
     .menu_create{
-        width: auto;
-        margin: 5px;
+        justify-content: center;
+        width: 500px;
+        margin: auto;
     }
     .captured_gif, .menu_download{
         flex-flow: column wrap;
         justify-content: center;
         width: 98%;
         height: auto;
-        margin: 5px;
+        margin: auto;
     }
-    .card_video_record, .card_button_capture, .card_img_record, img.gif_upload{
+    .card_video_record, .card_button_capture, .card_img_record, img.gif_upload, .video_record{
         justify-content: center;
         align-self: center;
-        margin: 5px;
+        margin: auto;
         width: 95%;
     }
     .card_img_button{
         justify-content: center;
     }
-    div.card_video_record > video, .card_img_record > img.img_record {
-        width: 100%;
-        height: auto;
-    }
+    
     .menu_download img.gif_upload, .card_progress_bar{
         justify-content: center;
         align-items: center;
