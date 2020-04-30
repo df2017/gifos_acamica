@@ -133,13 +133,16 @@ div#themes_content {
 /**************************** Container Section FOUR ****************************/
 
 .section-mygif{
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(20, auto);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    grid-gap: 15px;
-    grid-auto-flow: row dense;
+    
+}
+.section-mygif > img{
+    margin-top: 10px;
 }
 
 /**************************** Container Section UPLOAD ****************************/

@@ -93,7 +93,7 @@ function section_mygif(callback) {
   section_one.style.display = 'none';
   section_two.style.display = 'none';
   section_four.style.display = 'none';
-  section_three.style.display = 'grid';
+  section_three.style.display = 'block';
 }
 
 /**************************** Functions Back Section ****************************/
