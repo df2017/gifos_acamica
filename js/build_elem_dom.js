@@ -14,8 +14,12 @@ const tags = ['Movies', 'Anime', 'Reactions', 'Simpsons'];
 let contanier = document.querySelector("div.contenedor");
 let section_one = document.querySelector('#sectionone');
 let section_two = document.querySelector('#sectiontwo');
+
 let section_three = document.querySelector('#sectionthree');
+section_three.style.display = 'none';
+
 let section_four = document.querySelector('#sectionfour');
+section_four.style.display = 'none';
 
 let div_gifs1 = document.createElement('div');
 let div_gifs2 = document.createElement('div');
@@ -66,6 +70,8 @@ function section1_gif(section) {
         let card_button = document.createElement("button");
         let icon_close = document.createElement("img")
         let card_img = document.createElement("img");
+        let url = create_url('random', 0, elem);
+        let url_search = create_url('search', 20, elem);
 
         card_button.className = "viewmore";
 
@@ -77,19 +83,31 @@ function section1_gif(section) {
         card_gif_title.appendChild(button_close).setAttribute('class', 'close')
         button_close.appendChild(icon_close).setAttribute('src', 'images/button3.svg')
 
-        fetch(create_url('random', 0, elem))
+        fetch(url)
             .then((response) => {
                 return response.json();
             })
             .then((data) => {
                 card_img.src = data.data.fixed_height_downsampled_url//`https://media.giphy.com/media/${data['data'].id}/giphy.gif`;
             })
-            .catch(() => {
+            .catch((error) => {
                 card_img.src = 'images/not_available.gif';
+                console.log(JSON.stringify(error))
 
             });
+
+        card_button.addEventListener('click', () => {
+
+            let titles = document.querySelectorAll('#sectiontwo > div.section-title');
+            if (titles.length > 0) {
+                section_two.removeChild(titles[0]);
+            }
+            section2_gif(titles_section(elem, 'two'), url_search, 'home')
+
+        })
     })
 }
+
 
 /***************************** Function create Section2  *****************************/
 
@@ -130,7 +148,7 @@ function section2_gif(section, url, options = 'none') {
                 let width_img = (document.querySelector(`div.${class_div}`).offsetWidth).toString();
 
                 elems.addEventListener("mouseover", (event) => {
-                    
+
                     if (width_img != 0) tag_hover.style.width = `${width_img}px`;
                     tag_hover.style.height = '36px';
                     tag_hover.textContent = `#${tags}`;

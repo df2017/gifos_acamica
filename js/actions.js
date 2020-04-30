@@ -7,9 +7,55 @@ import { create_url } from './calls_api.js'
 
 import { section_one, section_two, section_three, section_four } from './build_elem_dom.js'
 
-/************************************ Selectors Themes ************************************/
+/******************************** Variables ********************************/
+
+let button_theme = document.querySelector('button.btn-nav-image');
+let button_theme_day = document.querySelector('button.btn-submenu-day');
+let button_theme_dark = document.querySelector('button.btn-submenu-dark')
+let button_migif = document.querySelector('#mygif');
+let button_back = document.querySelector('a.back');
+let button_create_gif = document.querySelector('button.btn-nav-create');
+let text_search = document.getElementById('search_input');
+let button_search = document.querySelector('button.search-item3');
+let nav_search = document.querySelector('div.navsearch');
+let div_word = document.createElement('div');
+
+/******************************* Constants  *******************************/
 
 const theme_content = document.getElementById('themes_content');
+
+/***************************** Event change themes *****************************/
+
+button_theme.addEventListener('click', () => {
+  theme_content.style.display = 'flex';
+});
+
+button_theme_day.addEventListener('click', () => { selection_themes('day') });
+button_theme_dark.addEventListener('click', () => { selection_themes('dark') });
+
+/***************************** Event Section My Gif *****************************/
+
+button_migif.addEventListener("click", () => { section_mygif() });
+
+/***************************** Event Back Section *****************************/
+
+button_back.addEventListener("click", () => { back_section() });
+
+/***************************** Event Create Gif *****************************/
+
+button_create_gif.addEventListener("click", () => { location.href = 'upload.html' });
+
+/***************************** Event Search Gif  *****************************/
+
+button_search.addEventListener('click', () => {
+  search_gif()
+  button_back.style.display = 'inline-block';
+  text_search.value = "";
+  button_search.style.backgroundColor = '#E6E6E6';
+
+});
+
+/******************************** Function Selectors Themes ********************************/
 
 function selection_themes(theme) {
   let t;
@@ -23,19 +69,7 @@ function selection_themes(theme) {
   theme_content.style.display = 'none';
 }
 
-let button_theme = document.querySelector('button.btn-nav-image');
-
-button_theme.addEventListener('click', () => {
-  theme_content.style.display = 'flex';
-});
-
-document.querySelector('button.btn-submenu-day').addEventListener('click', () => { selection_themes('day') });
-document.querySelector('button.btn-submenu-dark').addEventListener('click', () => { selection_themes('dark') });
-
-/**************************** Functions button next and back ****************************/
-
-section_three.style.display = 'none';
-titles_section('Mis guifos', 'three');
+/**************************** Functions Section My Gif ****************************/
 
 function section_mygif() {
 
@@ -45,8 +79,10 @@ function section_mygif() {
   section_two.style.display = 'none';
   section_four.style.display = 'none';
   section_three.style.display = 'block';
+  titles_section('Mis guifos', 'three');
 }
-document.querySelector('#mygif').addEventListener("click", () => { section_mygif() });
+
+/**************************** Functions Back Section ****************************/
 
 function back_section() {
   document.getElementById('mygif').style.pointerEvents = "auto";
@@ -57,47 +93,30 @@ function back_section() {
   section_three.style.display = 'none';
   section_four.style.display = 'none';
 }
-document.querySelector('a.back').addEventListener("click", () => { back_section() });
-
-/***************************** Call button Create GIF *****************************/
-
-document.querySelector('button.btn-nav-create').onclick = () => {
-  location.href = 'upload.html'
-};
 
 /***************************** Function button Search  *****************************/
 
-let text_search = document.getElementById('search_input');
-let button_search = document.querySelector('button.search-item3');
-
-section_four.style.display = 'none';
-titles_section(text_search.value, 'four');
-
-button_search.addEventListener('click', (e) => {
-
-  document.querySelector('a.back').style.display = 'inline-block';
-
-  let title_old = document.querySelector('#sectionfour > div.section-title');
-  section_four.removeChild(title_old);
+function search_gif() {
 
   let urls = create_url('search', 14, text_search.value);
+  section2_gif(titles_section(text_search.value, 'four'), urls);
+
+  let titles = document.querySelectorAll('#sectionfour > div.section-title');
+
+  if (titles.length > 1) {
+    section_four.removeChild(titles[0]);
+  }
+
   section_one.style.display = 'none';
   section_two.style.display = 'none';
   section_three.style.display = 'none';
   section_four.style.display = 'block';
 
-  section2_gif(titles_section(text_search.value, 'four'), urls);
+}
 
-  e.target.addEventListener('click', () => { text_search.value = "" })
+/***************************** Event and Function Autocomplete  *****************************/
 
-});
-
-/***************************** Function Autocomplete  *****************************/
-
-let nav_search = document.querySelector('div.navsearch');
-let div_word = document.createElement('div');
 nav_search.appendChild(div_word).setAttribute('class', 'card_word_autocomplete');
-
 text_search.addEventListener('input', (e) => {
 
   if (e.target.value == '') {
@@ -107,10 +126,7 @@ text_search.addEventListener('input', (e) => {
 
   let url = create_url('autocomplete', 0, (e.target.value).toString());
 
-  fetch(url, {
-    headers: {'Content-Type': 'application/json'},
-    method: "get"
-  })
+  fetch(url)
     .then((response) => {
       return response.json();
     })

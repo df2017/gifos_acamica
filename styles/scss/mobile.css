@@ -85,16 +85,12 @@
         margin-left: auto;
         margin-bottom: 10px;
     }
-    .card_button_menu button.menu_cancel {
+    .card_button_menu button.menu_cancel, .card_button_menu button.menu_begin {
         width: 100px;
         height: 24px;
         font-size: 12px;
     }
-    .card_button_menu button.menu_begin {
-        width: 100px;
-        height: 24px;
-        font-size: 12px;
-    }
+
     /**************************Section Upload *************************/
     .menu_create{
         width: auto;

@@ -1,3 +1,5 @@
+/*******************************  Extend Classes *******************************/
+
 %btn-navbar {
     height: 36px;
     background: #F7C9F3;
@@ -51,22 +53,18 @@
 .navupload .logonewdark {
     display: none;
 }
-
 .navupload a.back {
     display: none;
     margin: auto;
 }
-
 .navupload .item a {
     margin: 7px;
     text-decoration: none;
 }
-
 .navupload img#arrow {
     width: 24px;
     height: 24px;
 }
-
 .navupload .btn-nav-create {
     grid-area: a;
     @extend %font-family;
@@ -75,7 +73,6 @@
     padding: 9px 26px 9px 26px;
     width: 125px;
 }
-
 .navupload .btn-nav-choice {
     grid-area: b;
     @extend %font-family;
@@ -83,14 +80,12 @@
     padding: 9px 26px 9px 26px;
     width: 130px;
 }
-
 .navupload .btn-nav-image {
     grid-area: c;
     @extend %font-family;
     @extend %btn-navbar;
     width: 36px;
 }
-
 .navupload .btn-nav-create:hover,
 .navupload .btn-nav-choice:hover,
 .navupload .btn-nav-image:hover,
@@ -98,7 +93,6 @@
     border: 1px dotted #110038;
     padding: 2px;
 }
-
 .navupload a#mygif {
     @extend %font-family;
     grid-area: d;
@@ -109,17 +103,14 @@
     margin-left: 10px;
     text-decoration: none;
 }
-
 .navupload a#mygif::first-letter {
     text-decoration: underline;
 }
-
 .navupload a#mygif:hover {
     border: 1px dotted #110038;
     padding: 7px 0px 7px 0px;
     cursor: default;
 }
-
 .navupload a#mygif:active {
     color: #EBEBEB;
 }
@@ -204,7 +195,7 @@
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-/******* Elements Titles  *******/
+/******************************* Elements Titles *******************************/
 
 .section-title h2 {
     @extend %font-family;
@@ -220,8 +211,7 @@
     letter-spacing: 0;
 }
 
-
-/******* Elements  GIFT SECTION 1  *******/
+/******************************* Elements  GIFT SECTION 1 *******************************/
 
 #sectionone > div.section1-gif > div > img {
     width: 96%;
@@ -257,7 +247,7 @@ div.section1-gif > div > div > button > img {
     box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
 }
 
-/******* Elements GIFT SECTION 2  *******/
+/******************************* Elements GIFT SECTION 2 *******************************/
 
 @for $i from 0 to 20 {
     .card-gif#{$i} {
@@ -280,7 +270,8 @@ div.section1-gif > div > div > button > img {
     color: #FFFFFF;
     margin-top: -40px;
 }
-/******* Elements FOOTER *******/
+
+/******************************* Elements FOOTER *******************************/
 
 .footer_gif h4.foo {
     font-size: 1rem;
@@ -290,8 +281,8 @@ div.section1-gif > div > div > button > img {
     color: #FFFFFF;
 }
 
+/******************************* Elements Section UPLOAD *******************************/
 
-/******* Elements UPLOAD.html *******/
 %button_generic {
     @extend %font-family;
     width: 144px;
@@ -339,24 +330,6 @@ img.img_record{
     height: 434px;
     object-position: center;
 }
-
-@for $i from 0 to 23 {
-    .progress_block#{$i} {
-        width: 12px;
-        height: 20px;
-        margin: 1.5px;
-        background-color: #999999;
-    }
-}
-#progress_bar {
-    display: flex;
-    flex-direction: row;
-    margin-top: 39px;
-    width: 324px;
-    height: 24px;
-    background: #B4B4B4;
-    box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
-}
 .create_gif img {
     width: 32px;
     height: 34px;
@@ -390,7 +363,6 @@ img.img_record{
     line-height: 22px;
     margin-left: 16px;
 }
-
 .card_paragraph p {
     @extend %font-family;
     font-size: 14px;
@@ -399,18 +371,38 @@ img.img_record{
     line-height: 20px;
     margin-top: 10px;
 }
-
 .card_button_menu button.menu_cancel {
     @extend %button_menu;
     margin-right: 16px;
     background: #FFF4FD;
 }
-
 .card_button_menu button.menu_begin {
     @extend %button_menu;
     background: #F7C9F3;
 }
-/** *****************************************************************************************/
+
+/******************************* Elements Progress Bar *******************************/
+
+@for $i from 0 to 23 {
+    .progress_block#{$i} {
+        width: 12px;
+        height: 20px;
+        margin: 1.5px;
+        background-color: #999999;
+    }
+}
+#progress_bar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 39px;
+    width: 324px;
+    height: 24px;
+    background: #B4B4B4;
+    box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+}
+
+/******************************* Elements Download *******************************/
+
 .menu_download img.gif_upload{
     margin-top: 30px;
     margin-left: 27px;

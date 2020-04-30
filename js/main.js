@@ -10,14 +10,13 @@ let run = theme_default();
 
 /************************** Load theme **************************/
 
-function theme_default() { 
+function theme_default() {
 
     let theme = localStorage.getItem('theme');
-    console.log(theme)
     if (theme != null) {
         document.getElementById("themes").href = theme;
     }
-    else{ 
+    else {
         window.onload = localStorage.setItem('theme', 'styles/theme_day.css');
     }
     return true;
