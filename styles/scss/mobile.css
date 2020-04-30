@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .navupload {
         flex-direction: column;
         align-items: center;
@@ -54,6 +54,9 @@
         display: flex;
         flex-flow: column wrap;
         grid-template-areas: none;
+    }
+    .section-mygif{
+        justify-content: center;
     }
     .create_gif {
         min-width: 300px;
@@ -127,7 +130,7 @@
         height: auto;
         margin-left: 0px;
         margin-right: 0px;
-        width: 95%;
+        width: 98%;
         margin-bottom: 10px;
     }
     img.img_world{
@@ -149,7 +152,7 @@
     }
 }
 
-@media (min-width: 601px) and (max-width: 1000px) {
+@media (min-width: 501px) and (max-width: 1000px) {
     .section1-gif {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 290px);
@@ -178,5 +181,53 @@
     }
     .card_paragraph {
         margin-left: 50px;
+    }
+
+    /**************************Section Upload *************************/
+
+    .menu_create{
+        width: auto;
+        margin: 5px;
+    }
+    .captured_gif, .menu_download{
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 98%;
+        height: auto;
+        margin: 5px;
+    }
+    .card_video_record, .card_button_capture, .card_img_record, img.gif_upload{
+        justify-content: center;
+        align-self: center;
+        margin: 5px;
+        width: 95%;
+    }
+    .card_img_button{
+        justify-content: center;
+    }
+    .menu_download img.gif_upload, .card_progress_bar{
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 98%;
+        margin-bottom: 10px;
+    }
+    img.img_world{
+        margin-top: 10px;
+        width: 24px;
+        height: 30px;
+    }
+    .menu_download img.gif_upload
+    .card_button_capture, .card_button_stop, .card_button_upload,
+    .button_repeat, .button_upload, .card_button_cancel, .button_ok,.card_download_copy{
+        justify-content: center;
+        margin: 10px;
+    }
+    .card_img_button > button.button_ok{
+        justify-content: center;
+        margin: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
