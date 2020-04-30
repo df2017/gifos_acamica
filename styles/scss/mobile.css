@@ -205,6 +205,10 @@
     .card_img_button{
         justify-content: center;
     }
+    div.card_video_record > video, .card_img_record > img.img_record {
+        width: 100%;
+        height: auto;
+    }
     .menu_download img.gif_upload, .card_progress_bar{
         justify-content: center;
         align-items: center;
