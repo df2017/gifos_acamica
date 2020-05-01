@@ -12,6 +12,7 @@ import { section_one, section_two, section_three, section_four } from './build_e
 let button_theme = document.querySelector('button.btn-nav-image');
 let button_theme_day = document.querySelector('button.btn-submenu-day');
 let button_theme_dark = document.querySelector('button.btn-submenu-dark')
+let content_theme = document.querySelector('#themes_content');
 let button_migif = document.querySelector('#mygif');
 let button_back = document.querySelector('a.back');
 let button_create_gif = document.querySelector('button.btn-nav-create');
@@ -26,8 +27,14 @@ const theme_content = document.getElementById('themes_content');
 
 /***************************** Event change themes *****************************/
 
-button_theme.addEventListener('click', () => {
+button_theme.addEventListener('click', (e) => {
   theme_content.style.display = 'flex';
+  content_theme.addEventListener('mouseover', (e) => {
+    theme_content.style.display = 'flex';
+    e.target.addEventListener('mouseout', () =>{
+      theme_content.style.display = 'none';
+    })
+  })
 });
 
 button_theme_day.addEventListener('click', () => { selection_themes('day') });
@@ -90,10 +97,9 @@ function section_mygif(callback) {
       create_div.appendChild(create_img).setAttribute('class', 'img_save');
       create_img.src = `https://media.giphy.com/media/${localStorage.getItem(key)}/giphy.gif`;
     }
-
   })
 
-  button_migif.style.pointerEvents = "none";
+//  button_migif.style.pointerEvents = "none";
   button_back.style.display = 'inline-block';
   section_one.style.display = 'none';
   section_two.style.display = 'none';
@@ -102,16 +108,17 @@ function section_mygif(callback) {
 
   button_back.addEventListener("click", () => {
     back_section('mygif')
-  });
+  }, false);
 }
 
 /**************************** Functions Back Section ****************************/
 
 function back_section(option = 'none') {
 
-  if (option == 'mygif') {
-    let title_remove = document.querySelector('#sectionthree > div.section-title');
-    let gif_remove = document.querySelector('#sectionthree > div.section-mygif');
+  let title_remove = document.querySelector('#sectionthree > div.section-title');
+  let gif_remove = document.querySelector('#sectionthree > div.section-mygif');
+
+  if (option == 'mygif') {   
     section_three.removeChild(title_remove);
     section_three.removeChild(gif_remove);
   }
@@ -173,8 +180,9 @@ text_search.addEventListener('input', (e) => {
       }
       words.push(data.data);
       words[0].forEach((word) => {
-        div_word.style.display = 'flex';
         let button_complete = document.createElement('button');
+
+        div_word.style.display = 'flex';
         button_complete.textContent = word.name;
         div_word.appendChild(button_complete).setAttribute('class', 'btn_complete_word');
 
