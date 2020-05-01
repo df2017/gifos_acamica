@@ -36,7 +36,7 @@ button_theme_dark.addEventListener('click', () => { selection_themes('dark') });
 /***************************** Event Section My Gif *****************************/
 
 button_migif.addEventListener("click", () => {
-   section_mygif(titles_section)
+  section_mygif(titles_section)
 });
 
 /***************************** Event Back Section *****************************/
@@ -60,11 +60,17 @@ button_search.addEventListener('click', () => {
 /******************************** Function Selectors Themes ********************************/
 
 function selection_themes(theme) {
+
+  let logo = document.querySelector('#item > img.logo');
   let t;
   if (theme == 'day') {
     t = 'styles/theme_day.css';
+    logo.src = './images/gifOF_logo.png'
   }
-  else { t = 'styles/theme_dark.css'; }
+  else {
+    t = 'styles/theme_dark.css';
+    logo.src = './images/gifOF_logo_dark.png'
+  }
 
   localStorage.setItem('theme', t);
   document.getElementById("themes").href = t;
@@ -82,11 +88,14 @@ function section_mygif(callback) {
   Object.keys(localStorage).forEach((key, index) => {
     if (key != 'theme') {
       let create_img = document.createElement('img');
-      create_div.appendChild(create_img).setAttribute('class','img_save');
+      create_div.appendChild(create_img).setAttribute('class', 'img_save');
       create_img.src = `https://media.giphy.com/media/${localStorage.getItem(key)}/giphy.gif`;
     }
 
   })
+  button_back.addEventListener("click", () => {
+    back_section('mygif')
+  });
 
   button_migif.style.pointerEvents = "none";
   button_back.style.display = 'inline-block';
@@ -98,7 +107,14 @@ function section_mygif(callback) {
 
 /**************************** Functions Back Section ****************************/
 
-function back_section() {
+function back_section(option = 'none') {
+
+  if (option == 'mygif') {
+    let title_remove = document.querySelector('#sectionthree > div.section-title');
+    let gif_remove = document.querySelector('#sectionthree > div.section-mygif');
+    section_three.removeChild(title_remove);
+    section_three.removeChild(gif_remove);
+  }
 
   button_migif.style.pointerEvents = "auto";
   document.querySelector('div.nav-item').style.display = '';
