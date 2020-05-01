@@ -54,7 +54,6 @@ button_search.addEventListener('click', () => {
   button_back.style.display = 'inline-block';
   text_search.value = "";
   button_search.style.backgroundColor = '#E6E6E6';
-
 });
 
 /******************************** Function Selectors Themes ********************************/
@@ -93,9 +92,6 @@ function section_mygif(callback) {
     }
 
   })
-  button_back.addEventListener("click", () => {
-    back_section('mygif')
-  });
 
   button_migif.style.pointerEvents = "none";
   button_back.style.display = 'inline-block';
@@ -103,6 +99,10 @@ function section_mygif(callback) {
   section_two.style.display = 'none';
   section_four.style.display = 'none';
   section_three.style.display = 'block';
+
+  button_back.addEventListener("click", () => {
+    back_section('mygif')
+  });
 }
 
 /**************************** Functions Back Section ****************************/
@@ -123,12 +123,13 @@ function back_section(option = 'none') {
   section_two.style.display = 'block';
   section_three.style.display = 'none';
   section_four.style.display = 'none';
-
 }
 
 /***************************** Function button Search  *****************************/
 
 function search_gif() {
+
+
 
   let urls = create_url('search', 14, text_search.value);
   section2_gif(titles_section(text_search.value, 'four'), urls);
@@ -143,7 +144,6 @@ function search_gif() {
   section_two.style.display = 'none';
   section_three.style.display = 'none';
   section_four.style.display = 'block';
-
 }
 
 /***************************** Event and Function Autocomplete  *****************************/
@@ -164,12 +164,13 @@ text_search.addEventListener('input', (e) => {
     })
     .then((data) => {
       let word = nav_search.querySelectorAll('.card_word_autocomplete > .btn_complete_word');
+      let words = [];
+
       if (word.length == 5) {
         word.forEach((elem) => {
           div_word.removeChild(elem)
         })
       }
-      let words = [];
       words.push(data.data);
       words[0].forEach((word) => {
         div_word.style.display = 'flex';
