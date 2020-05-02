@@ -5,11 +5,11 @@
   border: 1px solid #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; }
 
-.head h1, .navupload .btn-nav-create, .navupload .btn-nav-choice, .navupload .btn-nav-image, .navupload a#mygif, .navsearch .search-item1, .navsearch .search-item2, .navsearch .search-item3, .card_word_autocomplete .btn_complete_word, .section-title h2, .card-gif-title h3, .section1-gif .card .viewmore, #sectiontwo > div p.tags_hover, #sectionfour > div p.tags_hover, button.btn_capture_gif, button.btn_stop_gif, button.button_repeat, button.button_upload, .btn_progress_cancel, .text_wait_upload, .card_logo_text h3, .card_paragraph p, .card_download_copy > h3, .card_download_copy > a.btn_download_gif, .card_download_copy > .btn_copy_gif, .card_img_button > button.button_ok {
+.head h1, .navupload .btn-nav-create, .navupload .btn-nav-choice, .navupload .btn-nav-image, .navupload a#mygif, .navsearch .search-item1, .navsearch .search-item2, .navsearch .search-item3, .card_word_autocomplete .btn_complete_word, .section-title h2, .card-gif-title h3, .section1-gif .card .viewmore, #sectiontwo > div p.tags_hover, #sectionfour > div p.tags_hover, button.btn_capture_gif, button.btn_stop_gif, button.button_repeat, button.button_upload, .btn_progress_cancel, .text_wait_upload, .card_logo_text h3, .card_paragraph p, .button_suggest, .card_download_copy > h3, .card_download_copy > a.btn_download_gif, .card_download_copy > .btn_copy_gif, .card_img_button > button.button_ok {
   font-family: 'Chakra Petch', sans-serif;
   letter-spacing: 0; }
 
-.card_button_menu button.menu_cancel, .card_button_menu button.menu_begin {
+.button_suggest, .card_button_menu button.menu_cancel, .card_button_menu button.menu_begin {
   font-family: 'Chakra Petch', sans-serif;
   letter-spacing: 0;
   width: 144px;
@@ -345,7 +345,7 @@ div.section1-gif > div > div > button > img {
   font-size: 14px;
   position: relative;
   color: #FFFFFF;
-  margin-top: -40px; }
+  margin-top: -25px; }
 
 /******************************* Elements FOOTER *******************************/
 .footer_gif h4.foo {
@@ -434,6 +434,16 @@ img.img_record {
   letter-spacing: 0;
   line-height: 20px;
   margin-top: 10px; }
+
+.button_suggest {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 18px;
+  background: #4180F6;
+  border: 1px solid #4C2F99;
+  box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF; }
 
 .card_button_menu button.menu_cancel {
   margin-right: 16px;

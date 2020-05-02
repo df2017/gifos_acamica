@@ -88,7 +88,7 @@ function section1_gif(section) {
                 return response.json();
             })
             .then((data) => {
-                card_img.src = data.data.fixed_height_downsampled_url//`https://media.giphy.com/media/${data['data'].id}/giphy.gif`;
+                card_img.src = data.data.fixed_height_downsampled_url
             })
             .catch((error) => {
                 card_img.src = 'images/not_available.gif';
@@ -120,6 +120,7 @@ function section2_gif(section, url, options = 'none') {
         section.appendChild(div_gifs3).setAttribute('class', 'section2-gif');
     }
 
+    let not_tag = [];
     fetch(url)
 
         .then(response => {
@@ -139,9 +140,12 @@ function section2_gif(section, url, options = 'none') {
                 else {
                     div_gifs3.appendChild(block_gifs3);
                 }
-                let tags = (elem.title).toString().split(' ').join(' #');
+                let tags = (elem.title).toString().split(' ')
+                tags.splice(tags.indexOf('GIF'), 1)
+                tags.splice(tags.indexOf('The'), 1)
+                tags.splice(tags.indexOf('by'), 1)
+   
                 let class_div = "card-gif" + (data.data.indexOf(elem)).toString()
-
                 block_gifs3.className = class_div;
                 elems.src = elem.images.fixed_height_downsampled.url; //`https://media.giphy.com/media/${elem.id}/giphy.gif`;
 
@@ -150,8 +154,14 @@ function section2_gif(section, url, options = 'none') {
                 elems.addEventListener("mouseover", (event) => {
 
                     if (width_img != 0) tag_hover.style.width = `${width_img}px`;
-                    tag_hover.style.height = '36px';
-                    tag_hover.textContent = `#${tags}`;
+                    tag_hover.style.height = '22px';
+                    let tag_ok = []
+                    tags.forEach((elem, index) => {
+                        if (index < 4) {
+                            tag_ok.push(elem)
+                        }
+                    })
+                    tag_hover.textContent = `#${tag_ok.join(' #')}`;
 
                     event.target.addEventListener("mouseout", () => {
                         tag_hover.textContent = '';

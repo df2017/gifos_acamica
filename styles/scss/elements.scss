@@ -268,7 +268,7 @@ div.section1-gif > div > div > button > img {
     font-size: 14px;
     position: relative;
     color: #FFFFFF;
-    margin-top: -40px;
+    margin-top: -25px;
 }
 
 /******************************* Elements FOOTER *******************************/
@@ -370,6 +370,18 @@ img.img_record{
     letter-spacing: 0;
     line-height: 20px;
     margin-top: 10px;
+}
+.button_suggest{
+    @extend %button_menu;
+    @extend %font-family;
+    margin-right: 8px;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 18px;
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
 }
 .card_button_menu button.menu_cancel {
     @extend %button_menu;

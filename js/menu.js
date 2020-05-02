@@ -22,7 +22,6 @@ const stream = () => {
     return navigator.mediaDevices.getUserMedia({ video: { width: 838, height: 434 } })
 };
 
-
 /***************************** Variables *****************************/
 
 let abortController;
@@ -31,12 +30,13 @@ let recorder;
 let url_gif;
 let copy_url_gif;
 let text_menu = [
-    'Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:',
-    '1) Dar permisos de acceso a la cámara (sólo por el tiempo de uso)',
-    '2) Capturar tu momento guifo',
-    '3) Revisar el momento',
-    '4) Listo para subir y compartir!',
-    '¿Quieres comenzar a crear tu guifo ahora?'
+    `<p>Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. 
+    Los pasos para crear tu guifo son:</p>
+    <p><strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</p>
+    <p><strong>2)</strong> Capturar tu momento guifo</p>
+    <p><strong>3)</strong> Revisar el momento</p>
+    <p><strong>4)</strong> Listo para subir y compartir!</p>
+    <p>¿Quieres comenzar a crear tu <strong>guifo</strong> ahora?</p>`
 ]
 
 /***************************** Function Window Menu Create GIF *****************************/
@@ -60,11 +60,7 @@ function menu_create_gifos() {
 
     let card_paragraph = document.createElement("div");
     container_menu.appendChild(card_paragraph).setAttribute('class', 'card_paragraph');
-
-    text_menu.forEach((param) => {
-        let paragraph = document.createElement('p');
-        card_paragraph.appendChild(paragraph).textContent = param;
-    })
+    card_paragraph.innerHTML = text_menu;
 
     let button_menu_cancel = document.createElement('button');
     let button_menu_begin = document.createElement('button');

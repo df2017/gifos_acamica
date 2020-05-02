@@ -7,8 +7,8 @@ import {
 
 /***************************** Variables primary *****************************/
 
+let theme = localStorage.getItem('theme');
 let section = document.getElementById('upload');
-
 let section_menu = document.createElement('div');
 section.appendChild(section_menu).setAttribute('class', 'menu_create');
 
@@ -36,12 +36,30 @@ function run_upload() {
 run_upload()
     .then((data) => {
         if (data) {
-            return create_menu_download()
+            create_menu_download()
+
+            let logo = document.querySelector('.item > img.logo');
+            let t;
+
+            if (theme == 'styles/theme_day.css') {
+                t = 'styles/theme_day.css';
+                logo.src = './images/gifOF_logo.png'
+           
+            } else {
+                t = 'styles/theme_dark.css';
+                logo.src = './images/gifOF_logo_dark.png'
+            }
+
+            localStorage.setItem('theme', t);
+            document.getElementById("themes").href = t;
+            //theme_content.style.display = 'none';
+
         }
     })
     .catch((error) => {
         console.log(`Error system: ${error}`);
     })
+
 
 /***************************** Variables secondary *****************************/
 
@@ -49,6 +67,7 @@ let text_title = document.querySelector('div.captured_gif > div.card-gif-title >
 let button_cancel = document.querySelector('button.menu_cancel');
 let button_begin = document.querySelector('button.menu_begin');
 let btn_capture = document.querySelector('button.btn_capture_gif');
+let btn_capture_img = document.querySelector('button.btn_capture_img');
 let btn_stop = document.querySelector('button.btn_stop_gif');
 let button_repeat = document.querySelector('button.button_repeat');
 let button_upload_gif = document.querySelector('button.button_upload');
@@ -212,6 +231,14 @@ function create_elements_div_record() {
 /***************************** Functions Events *****************************/
 
 function menu_begin(callback) {
+
+    let theme = localStorage.getItem('theme');
+
+    if (theme == 'styles/theme_dark.css') {
+        btn_capture.style.backgroundColor = '#EE3EFE';
+        btn_capture_img.style.backgroundColor = '#EE3EFE';
+    }
+
     let section = ['none', 'flex', 'none'];
     let tags = ['flex', 'none', 'none', 'none', 'flex', 'none', 'none'];
     text_title.textContent = 'Un Chequeo Antes de Empezar';
@@ -236,6 +263,12 @@ function stop_gif(callback) {
 }
 
 function repeat_gif(callback) {
+
+    if (theme == 'styles/theme_dark.css') {
+        button_repeat.style.backgroundColor = '#110038';
+        button_upload_gif.style.backgroundColor = '#110038';
+    }
+
     let section = ['none', 'flex', 'none'];
     let tags = ['flex', 'none', 'none', 'none', 'flex', 'none', 'none'];
     text_title.textContent = 'Un Chequeo Antes de Empezar';

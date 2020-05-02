@@ -20,6 +20,12 @@ let text_search = document.getElementById('search_input');
 let button_search = document.querySelector('button.search-item3');
 let nav_search = document.querySelector('div.navsearch');
 let div_word = document.createElement('div');
+let div_suggest = document.createElement('div');
+
+nav_search.appendChild(div_word).setAttribute('class', 'card_word_autocomplete');
+nav_search.appendChild(div_suggest).setAttribute('class', 'card_word_suggest');
+
+let card_suggest = document.querySelector('div.card_word_suggest');
 
 /******************************* Constants  *******************************/
 
@@ -31,7 +37,7 @@ button_theme.addEventListener('click', (e) => {
   theme_content.style.display = 'flex';
   content_theme.addEventListener('mouseover', (e) => {
     theme_content.style.display = 'flex';
-    e.target.addEventListener('mouseout', () =>{
+    e.target.addEventListener('mouseout', () => {
       theme_content.style.display = 'none';
     })
   })
@@ -52,16 +58,28 @@ button_back.addEventListener("click", back_section);
 
 /***************************** Event Create Gif *****************************/
 
-button_create_gif.addEventListener("click", () => { location.href = 'upload.html' });
+button_create_gif.addEventListener("click", () => {
+  location.href = 'upload.html'
+});
 
 /***************************** Event Search Gif  *****************************/
 
-button_search.addEventListener('click', () => {
-  search_gif()
+button_search.addEventListener('click', search_word_suggest);
+
+/******************************** Function Search suggest ********************************/
+
+function search_word_suggest() {
+
+  let word_search = text_search.value;
+  let url = create_url('suggest', 3, word_search);
+
+  search_gif(url)
+  div_suggest.style.display = 'flex';
   button_back.style.display = 'inline-block';
   text_search.value = "";
   button_search.style.backgroundColor = '#E6E6E6';
-});
+
+}
 
 /******************************** Function Selectors Themes ********************************/
 
@@ -99,7 +117,6 @@ function section_mygif(callback) {
     }
   })
 
-//  button_migif.style.pointerEvents = "none";
   button_back.style.display = 'inline-block';
   section_one.style.display = 'none';
   section_two.style.display = 'none';
@@ -118,27 +135,58 @@ function back_section(option = 'none') {
   let title_remove = document.querySelector('#sectionthree > div.section-title');
   let gif_remove = document.querySelector('#sectionthree > div.section-mygif');
 
-  if (option == 'mygif') {   
+  card_suggest.style.display = 'none';
+
+  if (option == 'mygif') {
     section_three.removeChild(title_remove);
     section_three.removeChild(gif_remove);
   }
-
-  button_migif.style.pointerEvents = "auto";
-  document.querySelector('div.nav-item').style.display = '';
-  button_back.style.display = 'none';
-  section_one.style.display = 'block';
-  section_two.style.display = 'block';
-  section_three.style.display = 'none';
-  section_four.style.display = 'none';
+  else {
+    button_migif.style.pointerEvents = "auto";
+    document.querySelector('div.nav-item').style.display = '';
+    button_back.style.display = 'none';
+    section_one.style.display = 'block';
+    section_two.style.display = 'block';
+    section_three.style.display = 'none';
+    section_four.style.display = 'none';
+  }
 }
 
 /***************************** Function button Search  *****************************/
 
-function search_gif() {
 
+function search_gif(url) {
 
+  let buttons = document.querySelectorAll('button.button_suggest');
 
-  let urls = create_url('search', 14, text_search.value);
+  console.log(buttons.length);
+  if (buttons.length == 3) {
+    buttons.forEach((elem) => {
+      div_suggest.removeChild(elem)
+    })
+  }
+
+  fetch(url)
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      let words = [];
+      words.push(data.data);
+      words[0].forEach((elem) => {
+        let button_suggest = document.createElement('button');
+        button_suggest.className = 'button_suggest'
+        div_suggest.appendChild(button_suggest).textContent = `#${elem.name}`
+
+        button_suggest.addEventListener('click', () => {
+          text_search.value = elem.name;
+          search_word_suggest()
+        })
+      })
+
+    })
+
+  let urls = create_url('search', 20, text_search.value);
   section2_gif(titles_section(text_search.value, 'four'), urls);
 
   let titles = document.querySelectorAll('#sectionfour > div.section-title');
@@ -146,7 +194,6 @@ function search_gif() {
   if (titles.length > 1) {
     section_four.removeChild(titles[0]);
   }
-
   section_one.style.display = 'none';
   section_two.style.display = 'none';
   section_three.style.display = 'none';
@@ -155,15 +202,26 @@ function search_gif() {
 
 /***************************** Event and Function Autocomplete  *****************************/
 
-nav_search.appendChild(div_word).setAttribute('class', 'card_word_autocomplete');
+
 text_search.addEventListener('input', (e) => {
 
-  if (e.target.value == '') {
-    button_search.style.backgroundColor = '#E6E6E6';
-  }
-  else { button_search.style.backgroundColor = '#F7C9F3'; }
-
+  let theme = localStorage.getItem('theme');
   let url = create_url('autocomplete', 0, (e.target.value).toString());
+
+  text_search.style.color = '#110038'
+
+  if (theme == 'styles/theme_dark.css') {
+    if (e.target.value == '') {
+      button_search.style.backgroundColor = '#E6E6E6';
+    }
+    else { button_search.style.backgroundColor = '#EE3EFE'; }
+  }
+  else {
+    if (e.target.value == '') {
+      button_search.style.backgroundColor = '#E6E6E6';
+    }
+    else { button_search.style.backgroundColor = '#F7C9F3'; }
+  }
 
   fetch(url)
     .then((response) => {
@@ -171,26 +229,28 @@ text_search.addEventListener('input', (e) => {
     })
     .then((data) => {
       let word = nav_search.querySelectorAll('.card_word_autocomplete > .btn_complete_word');
-      let words = [];
+      let words = [data.data];
 
-      if (word.length == 5) {
+      if (word.length >= 5) {
         word.forEach((elem) => {
           div_word.removeChild(elem)
         })
       }
-      words.push(data.data);
-      words[0].forEach((word) => {
-        let button_complete = document.createElement('button');
+      else {
+        words[0].forEach((elem) => {
+          let button_complete = document.createElement('button');
 
-        div_word.style.display = 'flex';
-        button_complete.textContent = word.name;
-        div_word.appendChild(button_complete).setAttribute('class', 'btn_complete_word');
+          div_word.style.display = 'flex';
+          button_complete.textContent = elem.name;
+          div_word.appendChild(button_complete).setAttribute('class', 'btn_complete_word');
 
-        button_complete.addEventListener('click', (event) => {
-          text_search.value = event.target.textContent;
-          div_word.style.display = 'none';
+          button_complete.addEventListener('click', (event) => {
+            text_search.value = event.target.textContent;
+            div_word.style.display = 'none';
+          })
+          words.shift();
         })
-        words.shift();
-      })
+      }
+
     })
 })

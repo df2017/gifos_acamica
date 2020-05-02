@@ -21,6 +21,9 @@ function create_url(action = 'none', limit = 0, tag = 'none') {
         case 'autocomplete':
             url = `https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${tag}`;
             break;
+        case 'suggest':
+            url = `https://api.giphy.com/v1/tags/related/${tag}?api_key=${api_key}&limit=${limit}`;
+            break;
         default:
             url = 'https://upload.giphy.com/v1/gifs'
             break;

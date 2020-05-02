@@ -27,7 +27,7 @@ body{
     box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
 }
 .navupload .btn-nav-create, .navupload .btn-nav-choice, 
-.navupload .btn-nav-image, .navsearch .search-item3{
+.navupload .btn-nav-image{
     color: #FFFFFF;
     background: #EE3EFE;
     border: 1px solid #110038;
