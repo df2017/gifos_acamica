@@ -130,7 +130,7 @@ function create_menu_download() {
         textarea.style.position = "fixed";
         document.body.appendChild(textarea);
         textarea.select();
-        document.execCommand("copy"); 
+        document.execCommand("copy");
         document.body.removeChild(textarea);
     });
 }
@@ -205,13 +205,20 @@ function upload_giphy() {
     let section = ['none', 'none', 'flex'];
     let tags = ['none', 'none', 'none', 'none', 'none', 'none', 'none'];
     let gif_upload = document.querySelector('.card_img_button > img.gif_upload');
+    let color_progress;
 
+    if (theme == 'styles/theme_dark.css') {
+        color_progress = '#EE3EFE'
+    } else {
+        color_progress = '#F7C9F3'
+    }
+    
     function progressbar() {
         if (width >= 22) {
             clearInterval(identity);
             return
         }
-        progress(width, '#F7C9F3')
+        progress(width, color_progress)
         width++;
     }
 
@@ -223,7 +230,7 @@ function upload_giphy() {
         .then(response => { return response.json() })
         .then((data) => {
             if (data['meta'].status == 200 || width >= 100) {
-                progress(22, '#F7C9F3');
+                progress(22, color_progress);
                 clearInterval(identity);
                 localStorage.setItem(gif_name, data['data'].id);
                 switch_card(section, tags)
