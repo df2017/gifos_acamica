@@ -1,7 +1,8 @@
 body{
     background-color: #110038;
 }
-.head, .navsearch .search-item1, .section1-gif .card .card-gif-title, #sectiontwo > div p.tags_hover , #sectionfour > div  p.tags_hover {
+.head, .navsearch .search-item1, .card-gif-title, #sectiontwo > div p.tags_hover , 
+#sectionfour > div  p.tags_hover {
     background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 .navupload a#mygif{
@@ -39,5 +40,18 @@ body{
     box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 i#arrow {
+    color: #FFFFFF;
+}
+button.button_repeat, button.button_upload{
+    color: #FFFFFF;
+    background: #110038;
+    border: 1px solid #B4B4B4;
+    box-shadow: inset -1px -1px 0 0 #5C5C5C, inset 1px 1px 0 0 #FFF4FD;
+}
+button.btn_capture_img, button.btn_capture_gif{
+    background: #EE3EFE;
+    color: #FFFFFF;
+}
+#capture_img{
     color: #FFFFFF;
 }

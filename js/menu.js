@@ -24,6 +24,7 @@ const stream = () => {
 
 /***************************** Variables *****************************/
 
+let theme = localStorage.getItem('theme');
 let abortController;
 let video;
 let recorder;
@@ -190,6 +191,12 @@ function upload_giphy() {
 
     abortController = new AbortController()
     let signal = abortController.signal;
+    let width = 0;
+    let identity = setInterval(progressbar, 270);
+    let section = ['none', 'none', 'flex'];
+    let tags = ['none', 'none', 'none', 'none', 'none', 'none', 'none'];
+    let gif_upload = document.querySelector('.card_img_button > img.gif_upload');
+    let color_progress;
 
     let progress = (elem, color) => {
         let element = document.querySelector(`div.progress_block${elem}`);
@@ -200,19 +207,12 @@ function upload_giphy() {
         progress(i, '#999999');
     }
 
-    let width = 0;
-    let identity = setInterval(progressbar, 270);
-    let section = ['none', 'none', 'flex'];
-    let tags = ['none', 'none', 'none', 'none', 'none', 'none', 'none'];
-    let gif_upload = document.querySelector('.card_img_button > img.gif_upload');
-    let color_progress;
-
     if (theme == 'styles/theme_dark.css') {
         color_progress = '#EE3EFE'
     } else {
         color_progress = '#F7C9F3'
     }
-    
+
     function progressbar() {
         if (width >= 22) {
             clearInterval(identity);

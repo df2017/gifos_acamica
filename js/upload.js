@@ -52,7 +52,6 @@ run_upload()
 
             localStorage.setItem('theme', t);
             document.getElementById("themes").href = t;
-            //theme_content.style.display = 'none';
 
         }
     })
@@ -67,7 +66,7 @@ let text_title = document.querySelector('div.captured_gif > div.card-gif-title >
 let button_cancel = document.querySelector('button.menu_cancel');
 let button_begin = document.querySelector('button.menu_begin');
 let btn_capture = document.querySelector('button.btn_capture_gif');
-let btn_capture_img = document.querySelector('button.btn_capture_img');
+let btn_capture_img = document.getElementById('capture_img');
 let btn_stop = document.querySelector('button.btn_stop_gif');
 let button_repeat = document.querySelector('button.button_repeat');
 let button_upload_gif = document.querySelector('button.button_upload');
@@ -232,13 +231,9 @@ function create_elements_div_record() {
 
 function menu_begin(callback) {
 
-    let theme = localStorage.getItem('theme');
-
     if (theme == 'styles/theme_dark.css') {
-        btn_capture.style.backgroundColor = '#EE3EFE';
-        btn_capture_img.style.backgroundColor = '#EE3EFE';
-    }
-
+        btn_capture_img.src = './images/camera_light.svg'
+    } 
     let section = ['none', 'flex', 'none'];
     let tags = ['flex', 'none', 'none', 'none', 'flex', 'none', 'none'];
     text_title.textContent = 'Un Chequeo Antes de Empezar';
@@ -255,6 +250,7 @@ function capture_gif(callback) {
 }
 
 function stop_gif(callback) {
+
     let section = ['none', 'flex', 'none'];
     let tags = ['none', 'none', 'flex', 'none', 'none', 'flex', 'none'];
     text_title.textContent = 'Vista Previa';
@@ -263,12 +259,7 @@ function stop_gif(callback) {
 }
 
 function repeat_gif(callback) {
-
-    if (theme == 'styles/theme_dark.css') {
-        button_repeat.style.backgroundColor = '#110038';
-        button_upload_gif.style.backgroundColor = '#110038';
-    }
-
+    
     let section = ['none', 'flex', 'none'];
     let tags = ['flex', 'none', 'none', 'none', 'flex', 'none', 'none'];
     text_title.textContent = 'Un Chequeo Antes de Empezar';
