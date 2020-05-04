@@ -56,7 +56,7 @@ run_upload()
         }
     })
     .catch((error) => {
-        console.log(`Error system: ${error}`);
+        console.log(`Error system: ${JSON.stringify(error)}`);
     })
 
 

@@ -60,12 +60,12 @@ i#arrow {
   grid-area: a;
   margin-right: 15px;
   padding: 9px 26px 9px 26px;
-  width: 125px; }
+  width: 130px; }
 
 .navupload .btn-nav-choice {
   grid-area: b;
   padding: 9px 26px 9px 26px;
-  width: 130px; }
+  width: 131px; }
 
 .navupload .btn-nav-image {
   grid-area: c;

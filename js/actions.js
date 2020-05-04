@@ -66,6 +66,15 @@ button_create_gif.addEventListener("click", () => {
 
 button_search.addEventListener('click', search_word_suggest);
 
+/***************************** Event hidde autocomplete  *****************************/
+
+div_word.addEventListener('mouseover', (e) => {
+  div_word.style.display = 'flex';
+  e.target.addEventListener('mouseout', () => {
+    div_word.style.display = 'none';
+  })
+})
+
 /******************************** Function Search suggest ********************************/
 
 function search_word_suggest() {
@@ -159,7 +168,6 @@ function search_gif(url) {
 
   let buttons = document.querySelectorAll('button.button_suggest');
 
-  console.log(buttons.length);
   if (buttons.length == 3) {
     buttons.forEach((elem) => {
       div_suggest.removeChild(elem)
