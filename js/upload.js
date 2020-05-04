@@ -71,11 +71,18 @@ let btn_stop = document.querySelector('button.btn_stop_gif');
 let button_repeat = document.querySelector('button.button_repeat');
 let button_upload_gif = document.querySelector('button.button_upload');
 let button_cancel_upload = document.querySelector('button.btn_progress_cancel');
+let button_window_close = document.querySelector('div.card-gif-title > button > img');
 
 /***************************** Event cancel back *****************************/
 
 button_cancel.addEventListener('click', () => {
     location.href = 'index.html'
+})
+
+/***************************** Event close window *****************************/
+
+button_window_close.addEventListener('click', () => {
+    location.href = 'upload.html'
 })
 
 /***************************** Event open Camera *****************************/
