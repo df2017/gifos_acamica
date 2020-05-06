@@ -48,13 +48,18 @@ button_theme_dark.addEventListener('click', () => { selection_themes('dark') });
 
 /***************************** Event Section My Gif *****************************/
 
-button_migif.addEventListener("click", () => {
+button_migif.addEventListener("click", (e) => {
   section_mygif(titles_section)
+  button_migif.style.pointerEvents = 'none';
+  nav_search.style.display = 'none';
 });
 
 /***************************** Event Back Section *****************************/
 
-button_back.addEventListener("click", back_section);
+button_back.addEventListener("click", () => {
+  nav_search.style.display = 'grid';
+  back_section()
+});
 
 /***************************** Event Create Gif *****************************/
 
