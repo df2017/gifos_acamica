@@ -114,11 +114,12 @@ function selection_themes(theme) {
 
 function section_mygif(callback) {
 
+  card_suggest.style.display = 'none';
   callback('Mis guifos', 'three');
   let create_div = document.createElement('div');
   section_three.appendChild(create_div).setAttribute('class', 'section-mygif')
 
-  Object.keys(localStorage).forEach((key, index) => {
+  Object.keys(localStorage).forEach((key) => {
     if (key != 'theme') {
       let create_img = document.createElement('img');
       create_div.appendChild(create_img).setAttribute('class', 'img_save');
